@@ -1,0 +1,128 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="8v]-OIjQdOr1hvp4j:qP">name</variable>
+  </variables>
+  <block type="on_keyphrase" id="o|PAV%!!sPct@Cz1Z2`." x="79" y="83">
+    <value name="keyphrase">
+      <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="Tnit`:Ju1)u`MJIfTZ#a">
+        <field name="TEXT"></field>
+      </shadow>
+      <block type="text" id="Tnit`:Ju1)u`MJIfTZ#a">
+        <field name="TEXT">What is your name</field>
+      </block>
+    </value>
+    <statement name="CODE">
+      <block type="variables_set" id="0!=A1:s9:gZsSgje=Awd">
+        <field name="VAR" id="8v]-OIjQdOr1hvp4j:qP">name</field>
+        <value name="VALUE">
+          <block type="get_private_var" id="wry+hbuIB+Sro2F_Y)Q0">
+            <field name="var_name">bot_name</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if_try" id="(D|$?_Th7h6aTiC]1hj#">
+            <value name="IF0">
+              <block type="logic_negate" id="e)ldt_Pz`)fdcnnM~b0a">
+                <value name="BOOL">
+                  <block type="variables_get" id="EOxEvBV}6LGgrg2~wGu=">
+                    <field name="VAR" id="8v]-OIjQdOr1hvp4j:qP">name</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="variables_set" id="YqpAz;}i[-+_%ryzZ^Ye">
+                <field name="VAR" id="8v]-OIjQdOr1hvp4j:qP">name</field>
+                <value name="VALUE">
+                  <block type="text" id="JfA}AI%Nscva,?g@4EU=">
+                    <field name="TEXT">chatterbox</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="speak" id="{VHsKPVdP#,.1_siM4Y[">
+                <value name="MESSAGE">
+                  <shadow xmlns="http://www.w3.org/1999/xhtml" type="text" id="uPY4kpa!Z7tte|A1:tHm">
+                    <field name="TEXT"></field>
+                  </shadow>
+                  <block type="multi_text" id="SBjR#.R+?69jFH-vS@EB">
+                    <field name="NAME">My name is </field>
+                    <value name="NAME">
+                      <block type="variables_get" id="!unlEAiN~x`3Y#.~kxr#">
+                        <field name="VAR" id="8v]-OIjQdOr1hvp4j:qP">name</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="on_keyphrase" id="X$--ANNF:a}LiC:?m0Iy" x="91" y="294">
+    <value name="keyphrase">
+      <shadow xmlns="http://www.w3.org/1999/xhtml" type="text">
+        <field name="TEXT"></field>
+      </shadow>
+      <block type="text" id="Fh|5,t{2aS#y-eW6T2Da">
+        <field name="TEXT">Who is your master</field>
+      </block>
+    </value>
+    <statement name="CODE">
+      <block type="variables_set" id="/B@0;eHic3[5*=od$y1*">
+        <field name="VAR" id="8v]-OIjQdOr1hvp4j:qP">name</field>
+        <value name="VALUE">
+          <block type="get_private_var" id="6Q`e-=`dGr02NekMOmW!">
+            <field name="var_name">master</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if_try" id="iK^`sge2)-%/b6O}Oios">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_negate" id="Y7gfpSdm|;k?uR0/@ON_">
+                <value name="BOOL">
+                  <block type="variables_get" id="R6H)g6N8wyGzi$Kox@IL">
+                    <field name="VAR" id="8v]-OIjQdOr1hvp4j:qP">name</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="speak" id="(PY-nL=_2M@c1ejlzKCU">
+                <value name="MESSAGE">
+                  <shadow type="text" id="9;]XpPQo}38YGDqA6P`b">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block type="multi_text" id="9N|7bUL.!l)h-TUooXEw">
+                    <field name="NAME">You are my master</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="speak" id="~t3[@9:kao`hg|BtB,zL">
+                <value name="MESSAGE">
+                  <shadow type="text" id=";B=%vX?t:ZZKB`,!mZLN">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block type="variables_get" id="W#X_7h|V`THZ=]MksN}E">
+                    <field name="VAR" id="8v]-OIjQdOr1hvp4j:qP">name</field>
+                    <value name="VALUE">
+                      <block type="multi_text" id="!v7h2-Y3=u{t(YX^4x#S">
+                        <field name="NAME"> is my master</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

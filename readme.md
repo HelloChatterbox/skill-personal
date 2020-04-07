@@ -1,14 +1,17 @@
 
-# Astronauts - Chatterbox Skill
+# Personal - Chatterbox Skill
 
-Find out who is currently in orbit
-
-Using chatterbox web_apis extensions you can query the [people in space API](http://open-notify.org/Open-Notify-API/People-In-Space/)
+About chatterbox
 
 Examples
 
-    "Who is in space?"
-    "How many people in orbit?"
+    "What is your name"
+    "Who is your master"
 
-![](astronauts.png)
+![](personal.png)
 
+
+use the "Vault" tab for saving private variables, those will populate the dropdown in the Skill Builder
+
+
+![](vault.png)
